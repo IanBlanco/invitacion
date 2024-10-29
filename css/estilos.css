@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Quicksand:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+//<uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 700
+
+.josefin-sans-<uniquifier> {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+*/
+html {
+
+    font-family: "Josefin Sans", sans-serif !important;
+}
+
+.masthead {
+    height: 100vh;
+}
+
+.nosCasamos {
+    font-family: "Quicksand", sans-serif;
+
+    font-style: normal;
+}
+
+#nosCasamosFecha {
+    font-size: medium;
+}
+
+.nombresDD {
+    font-family: "Playfair Display SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0 0 2vh 0 !important;
+}
+
+
+
+/*--------------musica----------------------------------------------*/
+
+
+
+.audio-player {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+    position: fixed;
+    top: 2vh;
+    right: 1vw;
+    
+}
+#playPauseImage{
+    border-radius: 50%;
+}
+.logoMusica{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:    #cebeae ;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+    position: relative;
+    top: 5px; right: 8px;
+    z-index: +1;
+    border: SOLID 2px black;
+}
+.logoMusica img{
+width: 80%;
+}
+
+.play-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: solid black 1px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    border-radius: 50%;
+    background-color: #b5c7bb;
+}
+
+.play-button :hover {
+    background-color: #8d9f87;
+    border-radius: 50px;
+    border: 1px solid black;
+}
+
+
+#playPauseButton :hover{
+    border: 1px solid black;
+}
+
+.play-button img {
+    width: 100%;
+
+}
+
+.play-button:focus {
+    outline: none;
+}
+
+/*---------------------------------------------contador dias---------------------------------------------------*/
+.contadorDias {
+    font-weight: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 28vh;
+    width: 100%;
+    margin: 0;
+    background-color: #eee7d5;
+}
+
+.contadorDiasDiv {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.time {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    font-size: 5vh;
+}
+
+.unit {
+    text-align: center;
+    margin: 5px 0;
+}
+
+.number {
+    font-size: 10vh;
+    color: #333;
+}
+
+.label {
+    color: #666;
+}
+
+/*------------ceremonia fiesta----------------------------------------------------*/
+.divImg {
+    width: 8rem;
+    height: 8rem;
+    margin: 0 auto;
+}
+
+.imagenCeremonia {
+    width: 90%;
+
+}
+
+#services {
+    padding: 10vh 0 3vh 0;
+}
+
+.pServices {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.divServices {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.divServices h2 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/*----------------Fecha y lugar--------------------------*/
+
+#fechaYlugar {
+    padding-top: 0;
+    padding-bottom: 2vh;
+
+}
+
+.imagenFechaYhora {
+    width: 70%;
+}
+
+/*---------------Asistencia--------------------------------------------------*/
+.sectionAsistencia {
+    padding: 2rem 0;
+}
+
+.btnConfirmacion {
+    margin: 0 5vw;
+}
+
+/*---------------Nuestra historia--------------------------------------------------*/
+.nuestraHistoriaImg {
+    width: 8%;
+}
+
+.sectionNH {
+    padding: 0 0 2rem 0;
+    display: none;
+}
+
+/*--------------- regalo--------------------------------------------------*/
+.regaloIMG {
+    width: 12%;
+    margin-bottom: 2vh;
+}
+
+
+/*--------------- galeria gracias--------------------------------------------------*/
+#galeriaGracias {
+
+    background-color: rgba(0, 0, 0, 0.05) !important;
+    padding: 0 0 2rem 0;
+}
+
+#galeriaGracias div div div {
+    margin: 1.5vh 0;
+}
+
+
+
+/*--------------- te esperamos--------------------------------------------------*/
+.teEsperamos {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 5vh 0 2vh 0;
+
+
+}
+
+.teEsperamos div div div h2 {
+    font-family: "Playfair Display SC", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: larger;
+
+}
+
+.losEsperamosDiv {
+    padding-bottom: 1vh;
+}
+
+/*--------------- footer--------------------------------------------------*/
+footer {
+    display: none;
+}
+
+.colores {
+    display: flex;
+}
+
+.colores div {
+    height: 100px;
+    width: 100px;
+}
+
+.colores .uno {
+    background-color: #eee7d5;
+}
+
+.colores .dos {
+    background-color: #ddc192;
+}
+
+.colores .tres {
+    background-color: #dbd9da;
+}
+
+.colores .cuatro {
+    background-color: #cebeae;
+}
+
+.colores .cinco {
+    background-color: #b5c7bb;
+}
+
+.colores .seis {
+    background-color: #8d9f87;
+}
+
+.colores .siete {
+    background-color: #efb77a;
+}

@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Daiana & Diego</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/pareja.png" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="./css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+
+<body id="page-top">
+
+    <!-- Masthead-->
+    <header class="masthead">
+
+
+        <div class="audio-player">
+            <div class="logoMusica">
+                <img src="./assets/img/boton play/musica.png" alt="logo musica">
+            </div>
+
+            <button class="play-button" id="playPauseButton"><img src="./assets/img/boton play/pausa.png"
+                    id="playPauseImage" alt="play"></button>
+        </div>
+
+        <audio id="musica" volume="0.1" autoplay loop>
+            <source src="./assets/music/JASON MRAZ - I'm Yours.mp3" type="audio/mpeg">
+            Audio.
+        </audio>
+
+
+
+
+        <div class="container">
+            <div class="masthead-subheading nosCasamos">Nos casamos!</div>
+            <div class="masthead-heading nombresDD">Die & Dai</div>
+            <div class="masthead-subheading nosCasamos" id="nosCasamosFecha">DOMINGO 29 DE DICIEMBRE </div>
+        </div>
+
+
+    </header>
+
+    <!-- contador tiempo-->
+    <div class="contadorDias">
+        <div class="countdown contadorDiasDiv">
+            <div class="time">
+                <div class="unit">
+                    <div id="days" class="number">0</div>
+                    <div class="label">Días</div>
+                </div>
+                <div class="unit">
+                    <div id="hours" class="number">0</div>
+                    <div class="label">Horas</div>
+                </div>
+                <div class="unit">
+                    <div id="minutes" class="number">0</div>
+                    <div class="label">Minutos</div>
+                </div>
+                <div class="unit">
+                    <div id="seconds" class="number">0</div>
+                    <div class="label">Segundos</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ceremonia-->
+    <section class="page-section" id="services">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12 divServices">
+                    <div class="fa-stack fa-4x divImg">
+                        <img class="fa-circle fa-stack-2x imagenCeremonia" src="./assets/img/confirmar-asistencia.png"
+                            alt="ceremonia">
+                    </div>
+
+                    <h2 class="my-3  text-uppercase">Ceremonia</h2>
+                    <p class="text-muted pServices">Estamos felices de compartir con vos este momento y nos encantaría
+                        que nos acompañes en este día tan especial. Te dejamos los detalles para que no te lo pierdas!
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- fechaa hora y navegacion-->
+    <section class="page-section" id="fechaYlugar">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-6 divServices">
+                    <div class="fa-stack fa-4x divImg">
+                        <img class="fa-circle fa-stack-2x imagenFechaYhora" src="./assets/img/hora-pico.png"
+                            alt="ceremonia">
+                    </div>
+
+                    <h4 class="my-3">Fecha y hora</h4>
+                    <p class="text-muted pServices">La ceremonia será el Domingo 29 de Diciembre a las 11:00 hs</p>
+                    <p class="text-muted pServices">¡Te recomendamos llegar con tiempo para que no te pierdas ni un
+                        instante de este momento mágico!</p>
+
+                </div>
+                <div class="col-md-6 divServices">
+                    <div class="fa-stack fa-4x divImg">
+                        <img class="fa-circle fa-stack-2x imagenFechaYhora" src="./assets/img/navegacion.png"
+                            alt="ceremonia">
+                    </div>
+                    <h4 class="my-3">Lugar</h4>
+                    <p class="text-muted pServices">La fiesta será en Quinta Cábala
+                        (Sourigues, B1886 Berazategui)
+                        .</p>
+                    <a href="https://maps.app.goo.gl/qtVb1n5FaxAmDdHL6" target="_blank">VER MAPA</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- asistencia-->
+    <section class="page-section sectionAsistencia" id="asistencia">
+        <div class="container">
+            <div class="row text-center">
+                <div class="fa-stack fa-4x divImg">
+                    <img class="fa-circle fa-stack-2x imagenCeremonia" src="./assets/img/documento.png" alt="ceremonia">
+                </div>
+                <div class="col-md-12">
+                    <h2 class="my-3 section-heading text-uppercase">Confirmación de asistencia</h2>
+                    <p class="text-muted">Nos haría muy felices contar con vos. Por favor, confirmanos tu asistencia
+                        antes del 1 de diciembre de 2024
+                    </p>
+                    <a href="" class="btnConfirmacion">Confirmo mi asistencia</a>
+                    <a href="" class="btnConfirmacion">No podré asistir</a>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- nuestra historia               APAGADO-->
+    <section class="page-section bg-light sectionNH" id="portfolio">
+        <div class="container">
+            <div class="text-center">
+                <img class="nuestraHistoriaImg" src="./assets/img/paloma.png" alt="NUESTRA HISTORIA">
+                <h2 class="section-heading text-uppercase">NUESTRA HISTORIA</h2>
+                <h3 class="section-subheading text-muted">En nuestras charlas, miradas y besos nos dimos cuenta que
+                    habiamos encontrado algo especial. Este tiempo compartido ha sido hermoso, y es apenas el principio
+                    de un nuevo viaje lleno de emociones.</h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 1-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/p6.jpg" alt="..." />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 2-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/p4.jpg" alt="..." />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 3-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/p2.jpg" alt="..." />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                    <!-- Portfolio item 4-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/p3.jpg" alt="..." />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                    <!-- Portfolio item 5-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/p5.jpg" alt="..." />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 6-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/p7.jpg" alt="..." />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- dress code-->
+    <section class="page-section sectionAsistencia" id="dressCode">
+        <div class="container">
+            <div class="row text-center">
+                <div class="fa-stack fa-4x divImg">
+                    <img class="fa-circle fa-stack-2x imagenCeremonia" src="./assets/img/vestido-de-novia.png"
+                        alt="ceremonia">
+                </div>
+                <div class="col-md-12">
+                    <h2 class="section-heading text-uppercase">DRESS CODE</h2>
+                    <p class="text-muted">Elegante sport</p>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- REGALO-->
+    <section class="page-section sectionAsistencia" id="regalo">
+        <div class="container">
+            <div class="row text-center">
+
+                <div class="col-md-12">
+                    <img class="nuestraHistoriaImg regaloIMG" src="./assets/img/regalo-de-bodas.png" alt="REGALO">
+                    <h2 class="section-heading text-uppercase">REGALO</h2>
+                    <p class="text-muted">Creamos una cuenta bancaria para que puedas contribuir a nuestra luna de miel
+                        soñada.
+                        ¡Te compartimos los datos para que puedas ayudarnos a hacer un viaje inolvidable!
+                    </p>
+                    <a href="">VER DATOS</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- playlist-->
+    <section class="page-section sectionAsistencia" id="playlist">
+        <div class="container">
+            <div class="row text-center">
+
+                <div class="col-md-12">
+                    <img class="nuestraHistoriaImg regaloIMG" src="./assets/img/musica.png" alt="REGALO">
+                    <h2 class="section-heading text-uppercase">PLAYLIST</h2>
+                    <p class="text-muted">Puedes recomendar canciones o artistas que no pueden faltar en la boda</p>
+                    <a href="">SUGERIR MUSICA</a>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- gracias-->
+    <section class="page-section teEsperamos">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h2 class="section-heading ">Gracias por ser parte de nuestra historia</h2>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!-- ---------------GALERIA X3---------------------->
+    <section class="page-section bg-light  " id="galeriaGracias">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-4 col-sm-12 mb-12">
+                    <!-- Portfolio item 1-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+
+                            <img class="img-fluid" src="assets/img/galeria22.jpg" alt="..." />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12 mb-12 galeriaItem">
+                    <!-- Portfolio item 2-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+
+                            <img class="img-fluid" src="assets/img/galeria11.jpg" alt="..." />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12 mb-12  ">
+                    <!-- Portfolio item 3-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+
+                            <img class="img-fluid" src="assets/img/galeria33.jpg" alt="..." />
+                        </a>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+    <!-- te esperamos-->
+    <section class="page-section teEsperamos">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12 losEsperamosDiv">
+                    <h2 class="section-heading ">¡Los esperamos!</h2>
+
+                    <h2 class="section-heading ">Die & Dai</h2>
+
+                    <img class="nuestraHistoriaImg regaloIMG" src="./assets/img/boda.png" alt="REGALO">
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <div class="colores">
+        <div class="uno"> #eee7d5</div>
+        <div class="dos"> #ddc192</div>
+        <div class="tres"> #dbd9da</div>
+        <div class="cuatro"> #cebeae</div>
+        <div class="cinco"> #b5c7bb</div>
+        <div class="seis"> #8d9f87</div>
+        <div class="siete"> #efb77a</div>
+    </div>
+
+    <!-- Footer-->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-start">Copyright &copy; Invitación 2024</div>
+                <div class="col-lg-4 my-3 my-lg-0">
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i
+                            class="fab fa-twitter"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+                    <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Portfolio Modals-->
+    <!-- Portfolio item 1 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" />
+                </div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <img class="img-fluid d-block mx-auto" src="assets/img/galeria2.jpg" alt="..." />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 2 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" />
+                </div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <img class="img-fluid d-block mx-auto" src="assets/img/galeria1.jpg" alt="..." />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 3 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" />
+                </div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <img class="img-fluid d-block mx-auto" src="assets/img/galeria3.jpg" alt="..." />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Secciones 4 5 y 6 desactivadas--------------------------------------------------------------->
+
+    <!-- Portfolio item 4 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" />
+                </div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 class="text-uppercase">Project Name</h2>
+                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/p3.jpg" alt="..." />
+                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 5 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" />
+                </div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 class="text-uppercase">Project Name</h2>
+                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/p5.jpg" alt="..." />
+                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 6 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" />
+                </div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 class="text-uppercase">Project Name</h2>
+                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/p7.jpg" alt="..." />
+                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- JS ian -->
+    <script src="./js/scriptIan.js"></script>
+
+
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+
+</html>
