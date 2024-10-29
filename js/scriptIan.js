@@ -42,9 +42,9 @@ const musica = document.getElementById('musica');
 playPauseButton.addEventListener('click', () => {
     if (musica.paused) {
         musica.play();
-        playPauseImage.src = './assets/img/boton play/pausa.png'; // Cambia la imagen a pausa
+        playPauseImage.src = 'assets/img/boton play/pausa.png'; // Cambia la imagen a pausa
     } else {
         musica.pause();
-        playPauseImage.src = './assets/img/boton play/boton-de-play.png'; // Cambia la imagen a play
+        playPauseImage.src = 'assets/img/boton play/boton-de-play.png'; // Cambia la imagen a play
     }
 });
