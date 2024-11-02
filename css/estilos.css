@@ -2,14 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Quicksand:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Quicksand:wght@300..700&display=swap');
 
+
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+    font-family: "Josefin Sans", sans-serif !important;
+}
+
+
+
 /*
-//<uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 700
 
 .josefin-sans-<uniquifier> {
   font-family: "Josefin Sans", sans-serif;
@@ -18,110 +30,176 @@
   font-style: normal;
 }
 */
-html {
 
-    font-family: "Josefin Sans", sans-serif !important;
-}
 
-.masthead {
+#nosCasamos_id {
     height: 100vh;
+    padding: 0 !important;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    text-align: center;
+    color: #fff;
+    background-image: url(../assets/img/header-bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
 }
+
+
 
 .nosCasamos {
     font-family: "Quicksand", sans-serif;
-
     font-style: normal;
+    font-size: 2rem;
 }
 
 #nosCasamosFecha {
-    font-size: medium;
+    font-size: 1.1rem;
 }
 
 .nombresDD {
     font-family: "Playfair Display SC", serif;
     font-weight: 400;
     font-style: normal;
-    margin: 0 0 2vh 0 !important;
+    font-size: 6rem;
+    height: 8rem;
 }
 
 
 
 /*--------------musica----------------------------------------------*/
 
-
-
-.audio-player {
+.audio.green-audio-player {
+    width: 6rem;
+    min-width: 300px;
+    height: 3rem;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.07);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-
-    width: 60px;
-    height: 60px;
-
-    border-radius: 50%;
-    position: fixed;
-    top: 2vh;
-    right: 1vw;
-    
-}
-#playPauseImage{
-    border-radius: 50%;
-}
-.logoMusica{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:    #cebeae ;
-
-    width: 30px;
-    height: 30px;
-
-    border-radius: 50%;
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+    border-radius: 2rem;
+    user-select: none;
+    -webkit-user-select: none;
+    background-color: #0000005b;
+    margin-top: 5%;
     position: relative;
-    top: 5px; right: 8px;
-    z-index: +1;
-    border: SOLID 2px black;
-}
-.logoMusica img{
-width: 80%;
+    left: 5%;
 }
 
-.play-button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border: solid black 1px;
-    width: 50px;
-    height: 50px;
-    font-size: 30px;
-    color: white;
+.audio.green-audio-player .play-pause-btn {
     cursor: pointer;
-    outline: none;
-    border-radius: 50%;
+}
+
+.audio.green-audio-player .slider {
+    flex-grow: 1;
     background-color: #b5c7bb;
+    cursor: pointer;
+    position: relative;
 }
 
-.play-button :hover {
-    background-color: #8d9f87;
-    border-radius: 50px;
-    border: 1px solid black;
+.audio.green-audio-player .slider .progress {
+    background-color: #44bfa3;
+    border-radius: inherit;
+    position: absolute;
+    pointer-events: none;
+}
+
+.audio.green-audio-player .slider .progress .pin {
+    height: 16px;
+    width: 16px;
+    border-radius: 8px;
+    background-color: #44bfa3;
+    position: absolute;
+    pointer-events: all;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.32);
+}
+
+.audio.green-audio-player .controls {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    color: #55606e;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.audio.green-audio-player .controls .slider {
+    margin-left: 16px;
+    margin-right: 16px;
+    border-radius: 2px;
+    height: 4px;
+}
+
+.audio.green-audio-player .controls .slider .progress {
+    width: 0;
+    height: 100%;
+}
+
+.audio.green-audio-player .controls .slider .pin {
+    right: -8px;
+    top: -6px;
+}
+
+.audio.green-audio-player .controls span {
+    cursor: default;
+}
+
+.audio.green-audio-player .volume {
+    position: relative;
+}
+
+.audio.green-audio-player .volume .volume-btn {
+    cursor: pointer;
+}
+
+.audio.green-audio-player .volume .volume-btn .open path {
+    fill: #44bfa3;
+}
+
+.audio.green-audio-player .volume .volume-controls {
+    width: 30px;
+    height: 135px;
+    background-color: rgba(0, 0, 0, 0.62);
+    border-radius: 7px;
+    position: absolute;
+    left: -3px;
+    bottom: 52px;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+
+.audio.green-audio-player .volume .volume-controls.hidden {
+    display: none;
+}
+
+.audio.green-audio-player .volume .volume-controls .slider {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    width: 6px;
+    border-radius: 3px;
+}
+
+.audio.green-audio-player .volume .volume-controls .slider .progress {
+    bottom: 0;
+    height: 100%;
+    width: 6px;
+}
+
+.audio.green-audio-player .volume .volume-controls .slider .progress .pin {
+    left: -5px;
+    top: -8px;
 }
 
 
-#playPauseButton :hover{
-    border: 1px solid black;
-}
-
-.play-button img {
-    width: 100%;
-
-}
-
-.play-button:focus {
-    outline: none;
-}
 
 /*---------------------------------------------contador dias---------------------------------------------------*/
 .contadorDias {
@@ -129,42 +207,55 @@ width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 28vh;
-    width: 100%;
+    padding: 5vh 0;
     margin: 0;
-    background-color: #eee7d5;
+    background-color: #b5c7bb;
+    width: 100vw;
 }
 
 .contadorDiasDiv {
     width: 100%;
     height: 100%;
     text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+
 }
 
 .time {
     height: 100%;
+    width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
     gap: 2%;
     font-size: 5vh;
+    flex-wrap: wrap;
 }
 
 .unit {
     text-align: center;
-    margin: 5px 0;
+    margin: 5px 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .number {
-    font-size: 10vh;
+    font-size: 4rem;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .label {
-    color: #666;
+    color: #333;
+    font-size: 80%;
 }
 
 /*------------ceremonia fiesta----------------------------------------------------*/
+
 .divImg {
     width: 8rem;
     height: 8rem;
@@ -183,17 +274,25 @@ width: 80%;
 .pServices {
     width: 80%;
     margin: 0 auto;
+    font-size: x-large;
 }
 
 .divServices {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .divServices h2 {
     font-size: 2.5rem;
     margin: 0;
+}
+
+.divServices div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 /*----------------Fecha y lugar--------------------------*/
@@ -217,6 +316,13 @@ width: 80%;
     margin: 0 5vw;
 }
 
+.ceremoniaP,
+.regaloP {
+    font-size: x-large;
+}
+#asistencia{
+    padding: 0 10%;
+}
 /*---------------Nuestra historia--------------------------------------------------*/
 .nuestraHistoriaImg {
     width: 8%;
@@ -229,7 +335,7 @@ width: 80%;
 
 /*--------------- regalo--------------------------------------------------*/
 .regaloIMG {
-    width: 12%;
+    width: 10%;
     margin-bottom: 2vh;
 }
 
@@ -237,7 +343,7 @@ width: 80%;
 /*--------------- galeria gracias--------------------------------------------------*/
 #galeriaGracias {
 
-    background-color: rgba(0, 0, 0, 0.05) !important;
+    background-color: #b5c7bb81 !important;
     padding: 0 0 2rem 0;
 }
 
@@ -249,8 +355,8 @@ width: 80%;
 
 /*--------------- te esperamos--------------------------------------------------*/
 .teEsperamos {
-    background-color: rgba(0, 0, 0, 0.05);
     padding: 5vh 0 2vh 0;
+    background-color: #b5c7bb81 !important;
 
 
 }
@@ -267,44 +373,286 @@ width: 80%;
     padding-bottom: 1vh;
 }
 
+.losEsperamosBack {
+
+    padding: 8vh 0 2vh 0;
+    height: 70vh;
+    background-image: url(../assets/img/backSec22.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Color de la máscara */
+    background-blend-mode: lighten;
+
+    background-attachment: fixed;
+
+}
+
+.losEsperamosBack div div div h2 {
+    font-family: "Playfair Display SC", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: larger;
+    margin: 3vh 0 0 0 !important;
+
+}
+
+
+
 /*--------------- footer--------------------------------------------------*/
 footer {
     display: none;
 }
 
-.colores {
-    display: flex;
+
+
+
+/*---------------------media query-----------------------------------------*/
+
+.celdaAjuste {
+    display: none;
 }
 
-.colores div {
-    height: 100px;
-    width: 100px;
+
+@media (max-width: 576px) {
+    #nosCasamos_id {
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 6fr 1fr;
+    }
+
+    .audio.green-audio-player {
+
+        background-color: #00000027;
+        margin-top: 5%;
+        position: relative;
+        left: 5%;
+    }
+
+    .celda2 {
+        display: none;
+    }
+
+    .celdaAjuste {
+        display: block;
+    }
+
+    .musicaControl {
+        position: relative;
+        margin-top: 10% !important;
+        left: 0 !important;
+    }
+
+    .nombresDD {
+        padding: 0 5%;
+        line-height: 5rem;
+        height: 16rem;
+    }
+
+    .contadorDiasDiv {
+        padding: 0 10%;
+    }
+
+    .dias,
+    .horas {
+        margin: 0 8vw !important;
+    }
+
+    .imagenCeremonia {
+        margin: 0 0 0 1vh !important;
+    }
+
+    .ceremoniaSubTitulo,
+    .pServices,
+    .ceremoniaP,
+    .regaloP {
+        font-size: 1.8rem !important;
+    }
+
+    .regaloP {
+        padding: 0 1vw;
+    }
+    #asistencia{
+        padding: 0 5%;
+    }
+    .btnConfirmacion {
+        font-size: 1.6rem !important;
+        display: block;
+        margin-top: 2vh !important;
+    }
+
+    .margin_top {
+        margin-top: 3vh;
+    }
+
+    .regaloIMG {
+        width: 28vw !important;
+    }
+    #regalo{
+        padding: 0 1%;
+    }
+    #playlist{
+        margin: 5vh 0;
+        padding: 0 1%;
+    }
+
+    .losEsperamosBack {
+        padding-top: 0 !important;
+        height: 64vh !important;
+        background-image: url(../assets/img/backSec22222.jpg) !important;
+        background-size: contain !important;
+        background-repeat: no-repeat;
+        background-position: bottom !important;
+    }
 }
 
-.colores .uno {
-    background-color: #eee7d5;
+
+/*-----------------------tablet------------------------*/
+
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+    #nosCasamos_id {
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 6fr 1fr;
+    }
+
+    .audio.green-audio-player {
+        background-color: #00000027;
+    }
+
+    .celda2 {
+        display: none;
+    }
+
+    .celdaAjuste {
+        display: block;
+    }
+
+    .musicaControl {
+        margin: 10% auto !important;
+        height: 4rem !important;
+    }
+
+    .nosCasamos,
+    #nosCasamosFecha {
+        font-size: 2.5rem;
+    }
+
+    .nombresDD {
+        padding: 0 5%;
+        line-height: 9rem;
+        font-size: 11rem;
+        height: 28rem;
+
+    }
+
+    .number {
+        font-size: 6rem;
+    }
+
+    .contadorDiasDiv {
+        padding: 0 10%;
+    }
+
+    .dias,
+    .horas {
+        margin: 0 8vw !important;
+    }
+
+    #fechaYlugar div div div {
+        display: block;
+    }
+
+    .divImg {
+        width: 20VW;
+        height: 15vh;
+    }
+
+    .imagenCeremonia {
+        margin: 0 0 0 1vh !important;
+    }
+
+    .ceremoniaSubTitulo,
+    .pServices,
+    .ceremoniaP,
+    .regaloP {
+        font-size: 2.6rem !important;
+    }
+
+    .regaloP {
+        padding: 0 1vw;
+    }
+
+    .btnConfirmacion {
+        text-transform: uppercase;
+        font-size: 1.8rem !important;
+        display: block;
+        margin-top: 2vh !important;
+    }
+
+    .margin_top {
+        margin-top: 3vh;
+    }
+
+    .lugar {
+        margin-top: 0 !important;
+    }
+
+    .regaloIMG {
+        width: 20vw !important;
+    }
+
+    .losEsperamosBack {
+        padding-top: 0 !important;
+        height: 62vh !important;
+        background-image: url(../assets/img/backSec2222.jpg) !important;
+        background-size: contain !important;
+        background-repeat: no-repeat;
+        background-position: bottom !important;
+    }
+
+    .losEsperamosDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .losEsperamosDiv h2 {
+        font-size: 5rem !important;
+    }
+
+    .graciasP {
+        font-size: 4rem !important;
+    }
+
+    .anillosImg {
+        position: absolute;
+        bottom: 3vh;
+
+    }
+
 }
 
-.colores .dos {
-    background-color: #ddc192;
-}
+/*
 
-.colores .tres {
-    background-color: #dbd9da;
+@media (min-width: 768px) {
+  .container-md, .container-sm, .container {
+    max-width: 720px;
+  }
 }
-
-.colores .cuatro {
-    background-color: #cebeae;
+@media (min-width: 992px) {
+  .container-lg, .container-md, .container-sm, .container {
+    max-width: 960px;
+  }
 }
-
-.colores .cinco {
-    background-color: #b5c7bb;
+@media (min-width: 1200px) {
+  .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1140px;
+  }
 }
-
-.colores .seis {
-    background-color: #8d9f87;
+@media (min-width: 1400px) {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1320px;
+  }
 }
-
-.colores .siete {
-    background-color: #efb77a;
-}
+*/

@@ -22,57 +22,86 @@
 <body id="page-top">
 
     <!-- Masthead-->
-    <header class="masthead">
 
+    <section id="nosCasamos_id">
+        <div></div>
+        <div class="celda2"></div>
 
-        <div class="audio-player">
-            <div class="logoMusica">
-                <img src="./assets/img/boton play/musica.png" alt="logo musica">
+        <div class="audio green-audio-player musicaControl">
+            <div class="play-pause-btn">
+              <svg viewBox="0 0 18 24" height="24" width="18" xmlns="http://www.w3.org/2000/svg">
+                <path id="playPause" class="play-pause-icon" d="M18 12L0 24V0" fill-rule="evenodd" fill="#566574"></path>
+              </svg>
             </div>
+          
+            <div class="controls">
+              <span class="current-time">0:00</span>
+              <div data-direction="horizontal" class="slider">
+                <div class="progress">
+                  <div data-method="rewind" id="progress-pin" class="pin"></div>
+                </div>
+              </div>
+              <span class="total-time">0:00</span>
+            </div>
+          
+            
+          
+            <audio autoplay >
+              <source src="assets/music/JASON MRAZ - I'm Yours.mp3" type="audio/mpeg">
+              Tu navegador no soporta el elemento de audio.
+            </audio>
+          </div>
+          
 
-            <button class="play-button" id="playPauseButton"><img src="./assets/img/boton play/pausa.png"
-                    id="playPauseImage" alt="play"></button>
+     
+          <div class="celdaAjuste"></div>
+        <div></div>
+        <div class="container divNosCasamos">
+            <div class="nosCasamos">Nos casamos!</div>
+            <div class=" nombresDD">Die & Dai</div>
+            <div class=" nosCasamos" id="nosCasamosFecha">Domingo 29 de Diciembre </div>
         </div>
-
-        <audio id="musica" volume="0.1" autoplay loop>
-            <source src="./assets/music/JASON MRAZ - I'm Yours.mp3" type="audio/mpeg">
-            Audio.
-        </audio>
-
-
-
-
-        <div class="container">
-            <div class="masthead-subheading nosCasamos">Nos casamos!</div>
-            <div class="masthead-heading nombresDD">Die & Dai</div>
-            <div class="masthead-subheading nosCasamos" id="nosCasamosFecha">DOMINGO 29 DE DICIEMBRE </div>
-        </div>
-
-
-    </header>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
 
     <!-- contador tiempo-->
-    <div class="contadorDias">
-        <div class="countdown contadorDiasDiv">
-            <div class="time">
-                <div class="unit">
-                    <div id="days" class="number">0</div>
-                    <div class="label">Días</div>
-                </div>
-                <div class="unit">
-                    <div id="hours" class="number">0</div>
-                    <div class="label">Horas</div>
-                </div>
-                <div class="unit">
-                    <div id="minutes" class="number">0</div>
-                    <div class="label">Minutos</div>
-                </div>
-                <div class="unit">
-                    <div id="seconds" class="number">0</div>
-                    <div class="label">Segundos</div>
+    <div class="contadorDias ">
+        <div class=" container">
+
+        
+        <div class="row ">
+
+
+            <div class="col-md-12 countdown contadorDiasDiv">
+                <div class="time">
+
+                    <div class="unit dias">
+                        <div id="days" class="number">0</div>
+                        <div class="label">Días</div>
+                    </div>
+                    <div class="unit horas">
+                        <div id="hours" class="number">0</div>
+                        <div class="label">Horas</div>
+                    </div>
+
+
+                    <div class="unit">
+                        <div id="minutes" class="number">0</div>
+                        <div class="label">Minutos</div>
+                    </div>
+                    <div class="unit">
+                        <div id="seconds" class="number">0</div>
+                        <div class="label">Segundos</div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <!-- Ceremonia-->
@@ -105,22 +134,22 @@
                             alt="ceremonia">
                     </div>
 
-                    <h4 class="my-3">Fecha y hora</h4>
+                    <h4 class="my-3 ceremoniaSubTitulo">Fecha y hora</h4>
                     <p class="text-muted pServices">La ceremonia será el Domingo 29 de Diciembre a las 11:00 hs</p>
                     <p class="text-muted pServices">¡Te recomendamos llegar con tiempo para que no te pierdas ni un
                         instante de este momento mágico!</p>
 
                 </div>
-                <div class="col-md-6 divServices">
+                <div class="col-md-6 divServices margin_top lugar">
                     <div class="fa-stack fa-4x divImg">
                         <img class="fa-circle fa-stack-2x imagenFechaYhora" src="./assets/img/navegacion.png"
                             alt="ceremonia">
                     </div>
-                    <h4 class="my-3">Lugar</h4>
+                    <h4 class="my-3 ceremoniaSubTitulo">Lugar</h4>
                     <p class="text-muted pServices">La fiesta será en Quinta Cábala
                         (Sourigues, B1886 Berazategui)
                         .</p>
-                    <a href="https://maps.app.goo.gl/qtVb1n5FaxAmDdHL6" target="_blank">VER MAPA</a>
+                    <a href="https://maps.app.goo.gl/qtVb1n5FaxAmDdHL6" target="_blank" class="btnConfirmacion">VER MAPA</a>
                 </div>
 
             </div>
@@ -128,7 +157,7 @@
     </section>
 
     <!-- asistencia-->
-    <section class="page-section sectionAsistencia" id="asistencia">
+    <section class="page-section sectionAsistencia margin_top" id="asistencia">
         <div class="container">
             <div class="row text-center">
                 <div class="fa-stack fa-4x divImg">
@@ -136,7 +165,7 @@
                 </div>
                 <div class="col-md-12">
                     <h2 class="my-3 section-heading text-uppercase">Confirmación de asistencia</h2>
-                    <p class="text-muted">Nos haría muy felices contar con vos. Por favor, confirmanos tu asistencia
+                    <p class="text-muted ceremoniaP">Nos haría muy felices contar con vos. Por favor, confirmanos tu asistencia
                         antes del 1 de diciembre de 2024
                     </p>
                     <a href="" class="btnConfirmacion">Confirmo mi asistencia</a>
@@ -239,7 +268,7 @@
                 </div>
                 <div class="col-md-12">
                     <h2 class="section-heading text-uppercase">DRESS CODE</h2>
-                    <p class="text-muted">Elegante sport</p>
+                    <p class="text-muted regaloP">Elegante sport</p>
                 </div>
 
 
@@ -255,11 +284,11 @@
                 <div class="col-md-12">
                     <img class="nuestraHistoriaImg regaloIMG" src="./assets/img/regalo-de-bodas.png" alt="REGALO">
                     <h2 class="section-heading text-uppercase">REGALO</h2>
-                    <p class="text-muted">Creamos una cuenta bancaria para que puedas contribuir a nuestra luna de miel
+                    <p class="text-muted regaloP">Creamos una cuenta bancaria para que puedas contribuir a nuestra luna de miel
                         soñada.
                         ¡Te compartimos los datos para que puedas ayudarnos a hacer un viaje inolvidable!
                     </p>
-                    <a href="">VER DATOS</a>
+                    <a class="btnConfirmacion">VER DATOS</a>
                 </div>
             </div>
         </div>
@@ -273,8 +302,8 @@
                 <div class="col-md-12">
                     <img class="nuestraHistoriaImg regaloIMG" src="./assets/img/musica.png" alt="REGALO">
                     <h2 class="section-heading text-uppercase">PLAYLIST</h2>
-                    <p class="text-muted">Puedes recomendar canciones o artistas que no pueden faltar en la boda</p>
-                    <a href="">SUGERIR MUSICA</a>
+                    <p class="text-muted ceremoniaP">Puedes recomendar canciones o artistas que no pueden faltar en la fiesta.</p>
+                    <a class="btnConfirmacion" href="">SUGERIR MUSICA</a>
                 </div>
 
 
@@ -287,7 +316,7 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-12">
-                    <h2 class="section-heading ">Gracias por ser parte de nuestra historia</h2>
+                    <h2 class="section-heading graciasP ">Gracias por ser parte de nuestra historia</h2>
                 </div>
 
 
@@ -333,15 +362,15 @@
         </div>
     </section>
     <!-- te esperamos-->
-    <section class="page-section teEsperamos">
+    <section class="page-section  losEsperamosBack">
         <div class="container">
-            <div class="row text-center">
+            <div class="row text-center verde">
                 <div class="col-md-12 losEsperamosDiv">
                     <h2 class="section-heading ">¡Los esperamos!</h2>
 
                     <h2 class="section-heading ">Die & Dai</h2>
 
-                    <img class="nuestraHistoriaImg regaloIMG" src="./assets/img/boda.png" alt="REGALO">
+                    <img class="nuestraHistoriaImg regaloIMG anillosImg" src="assets/img/boda.png" alt="REGALO">
                 </div>
 
 
@@ -350,15 +379,6 @@
     </section>
 
 
-    <div class="colores">
-        <div class="uno"> #eee7d5</div>
-        <div class="dos"> #ddc192</div>
-        <div class="tres"> #dbd9da</div>
-        <div class="cuatro"> #cebeae</div>
-        <div class="cinco"> #b5c7bb</div>
-        <div class="seis"> #8d9f87</div>
-        <div class="siete"> #efb77a</div>
-    </div>
 
     <!-- Footer-->
     <footer class="footer py-4">

@@ -29,6 +29,52 @@ const countdown = setInterval(() => {
 
 //---------------MUSICA---------------------------------------------------------
 
+
+
+
+const audio = document.querySelector('audio');
+
+audio.volume = 0.2;
+const playPauseButton = document.querySelector('.play-pause-btn');
+const currentTimeSpan = document.querySelector('.current-time');
+const totalTimeSpan = document.querySelector('.total-time');
+
+// Cargar el tiempo total al cargar el audio
+audio.addEventListener('loadedmetadata', () => {
+  totalTimeSpan.textContent = formatTime(audio.duration);
+  audio.currentTime = 6;
+});
+
+// Reproducir o pausar el audio al hacer clic en el botón
+playPauseButton.addEventListener('click', () => {
+  if (audio.paused) {
+    audio.volume = 0.2;
+    audio.play();
+    playPauseButton.querySelector('path').setAttribute('d', 'M6 4h2v16H6zm6 0h2v16h-2z'); // Cambiar a pausa
+  } else {
+    audio.volume = 0.2;
+    audio.pause();
+    playPauseButton.querySelector('path').setAttribute('d', 'M18 12L0 24V0'); // Cambiar a play
+  }
+});
+
+// Actualizar el tiempo actual y el progreso
+audio.addEventListener('timeupdate', () => {
+  currentTimeSpan.textContent = formatTime(audio.currentTime);
+  const progress = (audio.currentTime / audio.duration) * 100;
+  document.getElementById('progress-pin').style.left = `${progress}%`;
+});
+
+// Formatear el tiempo en minutos y segundos
+function formatTime(seconds) {
+  const minutes = Math.floor(seconds / 60);
+  const secs = Math.floor(seconds % 60);
+  return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+}
+
+
+
+/*
 window.addEventListener('load', () => {
     musica.volume = 0.1; // Volumen inicial al 10%
 });
@@ -48,3 +94,4 @@ playPauseButton.addEventListener('click', () => {
         playPauseImage.src = 'assets/img/boton play/boton-de-play.png'; // Cambia la imagen a play
     }
 });
+*/
