@@ -5,32 +5,32 @@ const countdownDate = new Date(new Date().getFullYear(), 11, 29, 0, 0, 0).getTim
 
 // Actualizar la cuenta regresiva cada segundo
 const countdown = setInterval(() => {
-    const now = new Date().getTime();
-    const timeLeft = countdownDate - now;
+  const now = new Date().getTime();
+  const timeLeft = countdownDate - now;
 
-    // Cálculo de días, horas, minutos y segundos
-    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+  // Cálculo de días, horas, minutos y segundos
+  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-    // Mostrar valores en HTML
-    document.getElementById("days").innerText = days;
-    document.getElementById("hours").innerText = hours;
-    document.getElementById("minutes").innerText = minutes;
-    document.getElementById("seconds").innerText = seconds;
+  // Mostrar valores en HTML
+  document.getElementById("days").innerText = days;
+  document.getElementById("hours").innerText = hours;
+  document.getElementById("minutes").innerText = minutes;
+  document.getElementById("seconds").innerText = seconds;
 
-    // Detener la cuenta regresiva al llegar a cero
-    if (timeLeft < 0) {
-        clearInterval(countdown);
-        document.querySelector(".countdown").innerHTML = "<h1>¡Felicidades por su boda!</h1>";
-    }
+  // Detener la cuenta regresiva al llegar a cero
+  if (timeLeft < 0) {
+    clearInterval(countdown);
+    document.querySelector(".countdown").innerHTML = "<h1>¡Felicidades por su boda!</h1>";
+  }
 }, 1000);
 
+
+
+
 //---------------MUSICA---------------------------------------------------------
-
-
-
 
 const audio = document.querySelector('audio');
 
@@ -74,24 +74,93 @@ function formatTime(seconds) {
 
 
 
-/*
-window.addEventListener('load', () => {
-    musica.volume = 0.1; // Volumen inicial al 10%
+/*-----------------------------FORMULARIO------------------------------------------------------------------ */
+document.addEventListener('DOMContentLoaded', function () {
+  // Seleccionamos todos los enlaces con la clase .btnConfirmacion
+  const btnConfirmaciones = document.querySelectorAll('.btnConfirmacion');
+  const asisitireDiv = document.querySelector('.asisitireDiv');
+  const closeForm = document.querySelector('.close-form');
+
+  // Crear el fondo overlay
+  const overlay = document.createElement('div');
+  overlay.className = 'overlay';
+  document.body.appendChild(overlay);
+
+  // Agregamos el evento click a cada botón de confirmación
+  btnConfirmaciones.forEach(function (btn) {
+    btn.addEventListener('click', function (event) {
+      event.preventDefault(); // Evita que el enlace recargue la página
+      asisitireDiv.classList.add('active');
+      overlay.classList.add('active');
+    });
+  });
+
+  // Cerrar el div y el fondo al hacer clic en el icono de cerrar o en el overlay
+  closeForm.addEventListener('click', function () {
+    asisitireDiv.classList.remove('active');
+    overlay.classList.remove('active');
+  });
+
+  overlay.addEventListener('click', function () {
+    asisitireDiv.classList.remove('active');
+    overlay.classList.remove('active');
+  });
 });
 
-const playPauseButton = document.getElementById('playPauseButton');
-const playPauseImage = document.getElementById('playPauseImage');
-const musica = document.getElementById('musica');
+
+
+/*----------PLAYLIST-------------------------------------------------------------------- */
+document.addEventListener('DOMContentLoaded', function () {
+  const btnMusica = document.querySelector('.btnMusica');
+  const musicaForm = document.querySelector('.musicaForm');
+  const closeMusica = document.querySelector('.close-musica');
+  const overlayMusica = document.createElement('div');
+  overlayMusica.className = 'overlay-musica';
+  document.body.appendChild(overlayMusica);
+
+  // Mostrar la ventana emergente al hacer clic en "SUGERIR MUSICA"
+  btnMusica.addEventListener('click', function (event) {
+    event.preventDefault(); // Evitar que el enlace recargue la página
+    musicaForm.classList.add('active');
+    overlayMusica.classList.add('active');
+  });
+
+  // Cerrar la ventana emergente al hacer clic en el icono de cerrar
+  closeMusica.addEventListener('click', function () {
+    musicaForm.classList.remove('active');
+    overlayMusica.classList.remove('active');
+  });
+
+  // Cerrar la ventana emergente al hacer clic en el overlay
+  overlayMusica.addEventListener('click', function () {
+    musicaForm.classList.remove('active');
+    overlayMusica.classList.remove('active');
+  });
+});
 
 
 
-playPauseButton.addEventListener('click', () => {
-    if (musica.paused) {
-        musica.play();
-        playPauseImage.src = 'assets/img/boton play/pausa.png'; // Cambia la imagen a pausa
-    } else {
-        musica.pause();
-        playPauseImage.src = 'assets/img/boton play/boton-de-play.png'; // Cambia la imagen a play
+/*-----------regalo----------------------------------------------------- */
+document.addEventListener('DOMContentLoaded', function () {
+  const btnRegalo = document.querySelector('.btnRegalo');
+  const regaloModal = document.querySelector('.regaloModal');
+  const closeModal = document.querySelector('.closeModal');
+
+  // Mostrar el modal al hacer clic en "VER DATOS"
+  btnRegalo.addEventListener('click', function (event) {
+    event.preventDefault(); // Evitar el comportamiento por defecto del enlace
+    regaloModal.style.display = 'flex'; // Mostrar el modal
+  });
+
+  // Cerrar el modal al hacer clic en el botón de cerrar
+  closeModal.addEventListener('click', function () {
+    regaloModal.style.display = 'none'; // Ocultar el modal
+  });
+
+  // Cerrar el modal al hacer clic fuera del contenido
+  regaloModal.addEventListener('click', function (event) {
+    if (event.target === regaloModal) { // Verifica si se hizo clic en el fondo
+      regaloModal.style.display = 'none'; // Ocultar el modal
     }
+  });
 });
-*/

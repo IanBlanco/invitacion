@@ -312,17 +312,101 @@ body {
     padding: 2rem 0;
 }
 
-.btnConfirmacion {
+.btnConfirmacion,
+.btnMapa,
+.btnCalendario {
     margin: 0 5vw;
+    text-transform: uppercase;
 }
 
 .ceremoniaP,
 .regaloP {
     font-size: x-large;
 }
-#asistencia{
+
+#asistencia {
     padding: 0 10%;
 }
+
+.close-form {
+    float: inline-end;
+    width: 4%;
+    background-color: white;
+    padding: 0.5%;
+    margin-right: 2%;
+    margin-top: 2%;
+    border-radius: 15%;
+}
+
+.close-form:hover {
+    border: 1.5px solid black;
+}
+
+.close-form:active {
+
+    border: 1.5px solid rgba(0, 0, 0, 0.212);
+}
+
+
+
+
+.asisitireDiv {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    max-height: 90vh;
+    /* Limitar la altura máxima a 90% de la pantalla */
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+    overflow: hidden;
+    /* Ocultar desbordes */
+}
+
+.asisitire {
+    width: 100%;
+    height: 90vh;
+    overflow-y: auto;
+    /* Permitir desplazamiento interno */
+}
+
+
+
+.asisitireDiv.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.close-form {
+    cursor: pointer;
+    text-align: right;
+}
+
+/* Fondo semitransparente detrás del popup */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
 /*---------------Nuestra historia--------------------------------------------------*/
 .nuestraHistoriaImg {
     width: 8%;
@@ -338,6 +422,113 @@ body {
     width: 10%;
     margin-bottom: 2vh;
 }
+
+.btnRegalo {
+
+    margin: 0 5vw;
+}
+
+.regaloModal {
+    display: none;
+    /* Inicialmente oculta */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Fondo oscuro */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    /* Asegura que esté por encima de otros elementos */
+}
+
+.modalContent {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    text-align: left;
+    position: relative;
+}
+
+.closeModal {
+    background-color: #44bfa3;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/*-----------------playlist----------------------------------------------------------------*/
+.btnMusica {
+
+    margin: 0 5vw;
+}
+
+
+
+.musicaForm {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+
+}
+
+.musicaForm iframe {
+    width: 100%;
+    height: 90vh;
+    overflow-y: auto;
+}
+
+.musicaForm.active {
+    opacity: 1;
+    visibility: visible;
+    overflow: hidden;
+    padding: 0;
+
+}
+
+.close-musica {
+    cursor: pointer;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+/* Fondo semitransparente detrás del modal */
+.overlay-musica {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+}
+
+.overlay-musica.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
 
 
 /*--------------- galeria gracias--------------------------------------------------*/
@@ -449,12 +640,23 @@ footer {
     }
 
     .contadorDiasDiv {
-        padding: 0 10%;
+        padding: 0 2%;
     }
 
-    .dias,
-    .horas {
-        margin: 0 8vw !important;
+    .unit {
+        margin: 5px 1%;
+    }
+
+    .time {
+        gap: 0;
+    }
+
+    .number {
+        font-size: 3rem;
+    }
+
+    .label {
+        font-size: 1.5rem;
     }
 
     .imagenCeremonia {
@@ -471,11 +673,21 @@ footer {
     .regaloP {
         padding: 0 1vw;
     }
-    #asistencia{
+
+    #asistencia {
         padding: 0 5%;
     }
-    .btnConfirmacion {
-        font-size: 1.6rem !important;
+
+    .asistenciaTitulo {
+        font-size: 1.9rem !important;
+    }
+
+    .btnConfirmacion,
+    .btnMusica,
+    .btnRegalo,
+    .btnMapa,
+    .btnCalendario {
+        font-size: 1.3rem !important;
         display: block;
         margin-top: 2vh !important;
     }
@@ -487,10 +699,12 @@ footer {
     .regaloIMG {
         width: 28vw !important;
     }
-    #regalo{
+
+    #regalo {
         padding: 0 1%;
     }
-    #playlist{
+
+    #playlist {
         margin: 5vh 0;
         padding: 0 1%;
     }
@@ -550,12 +764,23 @@ footer {
     }
 
     .contadorDiasDiv {
-        padding: 0 10%;
+        padding: 0 5%;
     }
 
-    .dias,
-    .horas {
-        margin: 0 8vw !important;
+    .unit {
+        margin: 5px 1%;
+    }
+
+    .time {
+        gap: 1%;
+    }
+
+    .number {
+        font-size: 6rem;
+    }
+
+    .label {
+        font-size: 3rem;
     }
 
     #fechaYlugar div div div {
@@ -582,9 +807,13 @@ footer {
         padding: 0 1vw;
     }
 
-    .btnConfirmacion {
+    .btnConfirmacion,
+    .btnMusica,
+    .btnRegalo,
+    .btnMapa,
+    .btnCalendario {
         text-transform: uppercase;
-        font-size: 1.8rem !important;
+        font-size: 1.4rem !important;
         display: block;
         margin-top: 2vh !important;
     }
@@ -633,26 +862,3 @@ footer {
 
 }
 
-/*
-
-@media (min-width: 768px) {
-  .container-md, .container-sm, .container {
-    max-width: 720px;
-  }
-}
-@media (min-width: 992px) {
-  .container-lg, .container-md, .container-sm, .container {
-    max-width: 960px;
-  }
-}
-@media (min-width: 1200px) {
-  .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1140px;
-  }
-}
-@media (min-width: 1400px) {
-  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1320px;
-  }
-}
-*/

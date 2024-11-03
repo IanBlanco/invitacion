@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8" />
@@ -29,32 +29,33 @@
 
         <div class="audio green-audio-player musicaControl">
             <div class="play-pause-btn">
-              <svg viewBox="0 0 18 24" height="24" width="18" xmlns="http://www.w3.org/2000/svg">
-                <path id="playPause" class="play-pause-icon" d="M18 12L0 24V0" fill-rule="evenodd" fill="#566574"></path>
-              </svg>
+                <svg viewBox="0 0 18 24" height="24" width="18" xmlns="http://www.w3.org/2000/svg">
+                    <path id="playPause" class="play-pause-icon" d="M18 12L0 24V0" fill-rule="evenodd" fill="#566574">
+                    </path>
+                </svg>
             </div>
-          
-            <div class="controls">
-              <span class="current-time">0:00</span>
-              <div data-direction="horizontal" class="slider">
-                <div class="progress">
-                  <div data-method="rewind" id="progress-pin" class="pin"></div>
-                </div>
-              </div>
-              <span class="total-time">0:00</span>
-            </div>
-          
-            
-          
-            <audio autoplay >
-              <source src="assets/music/JASON MRAZ - I'm Yours.mp3" type="audio/mpeg">
-              Tu navegador no soporta el elemento de audio.
-            </audio>
-          </div>
-          
 
-     
-          <div class="celdaAjuste"></div>
+            <div class="controls">
+                <span class="current-time">0:00</span>
+                <div data-direction="horizontal" class="slider">
+                    <div class="progress">
+                        <div data-method="rewind" id="progress-pin" class="pin"></div>
+                    </div>
+                </div>
+                <span class="total-time">0:00</span>
+            </div>
+
+
+
+            <audio autoplay>
+                <source src="assets/music/JASON MRAZ - I'm Yours.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+
+
+
+        <div class="celdaAjuste"></div>
         <div></div>
         <div class="container divNosCasamos">
             <div class="nosCasamos">Nos casamos!</div>
@@ -71,37 +72,37 @@
     <div class="contadorDias ">
         <div class=" container">
 
-        
-        <div class="row ">
+
+            <div class="row ">
 
 
-            <div class="col-md-12 countdown contadorDiasDiv">
-                <div class="time">
+                <div class="col-md-12 countdown contadorDiasDiv">
+                    <div class="time">
 
-                    <div class="unit dias">
-                        <div id="days" class="number">0</div>
-                        <div class="label">Días</div>
+                        <div class="unit dias">
+                            <div id="days" class="number">0</div>
+                            <div class="label">Días</div>
+                        </div>
+                        <div class="unit horas">
+                            <div id="hours" class="number">0</div>
+                            <div class="label">Horas</div>
+                        </div>
+
+
+                        <div class="unit">
+                            <div id="minutes" class="number">0</div>
+                            <div class="label">Minutos</div>
+                        </div>
+                        <div class="unit">
+                            <div id="seconds" class="number">0</div>
+                            <div class="label">Segundos</div>
+                        </div>
+
+
                     </div>
-                    <div class="unit horas">
-                        <div id="hours" class="number">0</div>
-                        <div class="label">Horas</div>
-                    </div>
-
-
-                    <div class="unit">
-                        <div id="minutes" class="number">0</div>
-                        <div class="label">Minutos</div>
-                    </div>
-                    <div class="unit">
-                        <div id="seconds" class="number">0</div>
-                        <div class="label">Segundos</div>
-                    </div>
-
-
                 </div>
             </div>
         </div>
-    </div>
     </div>
 
     <!-- Ceremonia-->
@@ -138,6 +139,9 @@
                     <p class="text-muted pServices">La ceremonia será el Domingo 29 de Diciembre a las 11:00 hs</p>
                     <p class="text-muted pServices">¡Te recomendamos llegar con tiempo para que no te pierdas ni un
                         instante de este momento mágico!</p>
+                    <a class="btnCalendario" target="_blank"
+                        href="https://calendar.app.google/RR6jW8nUt5dayERY6">Agendalo</a>
+
 
                 </div>
                 <div class="col-md-6 divServices margin_top lugar">
@@ -149,7 +153,8 @@
                     <p class="text-muted pServices">La fiesta será en Quinta Cábala
                         (Sourigues, B1886 Berazategui)
                         .</p>
-                    <a href="https://maps.app.goo.gl/qtVb1n5FaxAmDdHL6" target="_blank" class="btnConfirmacion">VER MAPA</a>
+                    <a href="https://maps.app.goo.gl/qtVb1n5FaxAmDdHL6" target="_blank" class="btnMapa">VER
+                        MAPA</a>
                 </div>
 
             </div>
@@ -164,99 +169,31 @@
                     <img class="fa-circle fa-stack-2x imagenCeremonia" src="./assets/img/documento.png" alt="ceremonia">
                 </div>
                 <div class="col-md-12">
-                    <h2 class="my-3 section-heading text-uppercase">Confirmación de asistencia</h2>
-                    <p class="text-muted ceremoniaP">Nos haría muy felices contar con vos. Por favor, confirmanos tu asistencia
+                    <h2 class="my-3 section-heading text-uppercase asistenciaTitulo">Confirmación de asistencia</h2>
+                    <p class="text-muted ceremoniaP">Nos haría muy felices contar con vos. Por favor, confirmanos tu
+                        asistencia
                         antes del 1 de diciembre de 2024
                     </p>
-                    <a href="" class="btnConfirmacion">Confirmo mi asistencia</a>
-                    <a href="" class="btnConfirmacion">No podré asistir</a>
+                    <a href="#" class="btnConfirmacion">Confirmar</a>
+                    <!-- 
+                    <a href="#" class="btnConfirmacion">No podré asistir</a>
+                    -->
                 </div>
 
 
             </div>
         </div>
-    </section>
+        <div class="asisitireDiv">
+            <div class="close-form"><img src="assets/img/close-icon.svg" alt="Close Form" />
+            </div>
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSeYP3kD1Bg5bJu9r_UHOOCQ03YDN8wX1LWDnZfVqt5Kzik9Kg/viewform?embedded=true"
+                frameborder="0" marginheight="0" marginwidth="0" class="asisitire">Cargando…</iframe>
 
-    <!-- nuestra historia               APAGADO-->
-    <section class="page-section bg-light sectionNH" id="portfolio">
-        <div class="container">
-            <div class="text-center">
-                <img class="nuestraHistoriaImg" src="./assets/img/paloma.png" alt="NUESTRA HISTORIA">
-                <h2 class="section-heading text-uppercase">NUESTRA HISTORIA</h2>
-                <h3 class="section-subheading text-muted">En nuestras charlas, miradas y besos nos dimos cuenta que
-                    habiamos encontrado algo especial. Este tiempo compartido ha sido hermoso, y es apenas el principio
-                    de un nuevo viaje lleno de emociones.</h3>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <!-- Portfolio item 1-->
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/p6.jpg" alt="..." />
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <!-- Portfolio item 2-->
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/p4.jpg" alt="..." />
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <!-- Portfolio item 3-->
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/p2.jpg" alt="..." />
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                    <!-- Portfolio item 4-->
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/p3.jpg" alt="..." />
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                    <!-- Portfolio item 5-->
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/p5.jpg" alt="..." />
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <!-- Portfolio item 6-->
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/p7.jpg" alt="..." />
-                        </a>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
+
+
 
     <!-- dress code-->
     <section class="page-section sectionAsistencia" id="dressCode">
@@ -284,12 +221,24 @@
                 <div class="col-md-12">
                     <img class="nuestraHistoriaImg regaloIMG" src="./assets/img/regalo-de-bodas.png" alt="REGALO">
                     <h2 class="section-heading text-uppercase">REGALO</h2>
-                    <p class="text-muted regaloP">Creamos una cuenta bancaria para que puedas contribuir a nuestra luna de miel
+                    <p class="text-muted regaloP">Creamos una cuenta bancaria para que puedas contribuir a nuestra luna
+                        de miel
                         soñada.
                         ¡Te compartimos los datos para que puedas ayudarnos a hacer un viaje inolvidable!
                     </p>
-                    <a class="btnConfirmacion">VER DATOS</a>
+                    <a class="btnRegalo">VER DATOS</a>
                 </div>
+            </div>
+        </div>
+        <div class="regaloModal">
+            <div class="modalContent">
+                <h2>Datos para regalos</h2>
+                <p><strong>Banco:</strong> Santander</p>
+                <p><strong>Titular:</strong> XXXXXXXXX</p>
+                <p><strong>N° de Cuenta:</strong> XXXXXXXX</p>
+                <p><strong>Caja de ahorro:</strong> XXXXXXXX</p>
+                <p><strong>CBU:</strong> XXXXXXXXXXX</p>
+                <button class="closeModal">Cerrar</button>
             </div>
         </div>
     </section>
@@ -302,8 +251,17 @@
                 <div class="col-md-12">
                     <img class="nuestraHistoriaImg regaloIMG" src="./assets/img/musica.png" alt="REGALO">
                     <h2 class="section-heading text-uppercase">PLAYLIST</h2>
-                    <p class="text-muted ceremoniaP">Puedes recomendar canciones o artistas que no pueden faltar en la fiesta.</p>
-                    <a class="btnConfirmacion" href="">SUGERIR MUSICA</a>
+                    <p class="text-muted ceremoniaP">Puedes recomendar canciones o artistas que no pueden faltar en la
+                        fiesta.</p>
+                    <a class=" btnMusica" href="">SUGERIR MUSICA</a>
+                </div>
+                <div class="musicaForm">
+                    <div class="close-form close-musica"><img src="assets/img/close-icon.svg" alt="Close Form" />
+                    </div>
+                    <iframe
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSf1E9ckciPedIhvtnZD-SsM_fabmYfFONM231gLFzFcryE_fA/viewform?embedded=true"
+                        height="582" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+
                 </div>
 
 
