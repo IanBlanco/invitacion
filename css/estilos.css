@@ -1,8 +1,101 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Quicksand:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/*
+.cormorant-garamond-light {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.cormorant-garamond-regular {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cormorant-garamond-medium {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.cormorant-garamond-semibold {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.cormorant-garamond-bold {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cormorant-garamond-light-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.cormorant-garamond-regular-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.cormorant-garamond-medium-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.cormorant-garamond-semibold-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.cormorant-garamond-bold-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+*/
 
 
+
+/*---------IMAGEN BIENVENIDA--------------------------------*/
+
+ /* Imagen de bienvenida */
+ .splash {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: url('../assets/img/envelopet.png') no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1s;
+    z-index: 10;
+}
+.splash button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.splash button img{
+    
+    border-radius: 50%;
+}
+/* Ocultar contenido al inicio */
+#contenido {
+    display: none;
+}
 
 * {
     margin: 0;
@@ -15,10 +108,8 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-
     font-family: "Josefin Sans", sans-serif !important;
 }
-
 
 
 /*
@@ -45,24 +136,24 @@ body {
     background-attachment: scroll;
     background-position: center center;
     background-size: cover;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 
 
 .nosCasamos {
-    font-family: "Quicksand", sans-serif;
-    font-style: normal;
     font-size: 2rem;
 }
 
 #nosCasamosFecha {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .nombresDD {
-    font-family: "Playfair Display SC", serif;
-    font-weight: 400;
-    font-style: normal;
+    
     font-size: 6rem;
     height: 8rem;
 }
@@ -459,7 +550,8 @@ body {
 }
 
 .closeModal {
-    background-color: #b5c7bb;;
+    background-color: #b5c7bb;
+    ;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -557,7 +649,9 @@ body {
 }
 
 .teEsperamos div div div h2 {
-    font-family: "Playfair Display SC", serif;
+    font-family: "Cormorant Garamond", serif;
+    /*font-weight: 400;
+    font-style: normal;*/
     font-weight: 600;
     font-style: italic;
     font-size: larger;
@@ -567,6 +661,7 @@ body {
 .losEsperamosDiv {
     padding-bottom: 1vh;
 }
+
 
 .losEsperamosBack {
 
@@ -584,10 +679,12 @@ body {
 }
 
 .losEsperamosBack div div div h2 {
-    font-family: "Playfair Display SC", serif;
+    font-family: "Cormorant Garamond", serif;
+    /*font-weight: 400;
+    font-style: normal;*/
     font-weight: 600;
     font-style: italic;
-    font-size: larger;
+    font-size: 4rem !important;
     margin: 3vh 0 0 0 !important;
 
 }
@@ -610,6 +707,10 @@ footer {
 
 
 @media (max-width: 576px) {
+
+    .splash {
+        background: url('../assets/img/envelopetm.png') no-repeat center/cover;
+    }
     #nosCasamos_id {
         grid-template-columns: 1fr 2fr 1fr;
         grid-template-rows: 1fr 6fr 1fr;
@@ -638,7 +739,7 @@ footer {
     }
 
     .nombresDD {
-        padding: 0 5%;
+        padding: 0 10%;
         line-height: 5rem;
         height: 16rem;
     }
@@ -713,6 +814,9 @@ footer {
         padding: 0 1%;
     }
 
+    .graciasP{
+        font-size: 3rem !important;
+    }
     .losEsperamosBack {
         padding-top: 0 !important;
         height: 64vh !important;
@@ -726,6 +830,151 @@ footer {
 
 /*-----------------------tablet------------------------*/
 
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+
+    .splash {
+        background: url('../assets/img/envelopetm.png') no-repeat center/cover;
+    }
+    #nosCasamos_id {
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 6fr 1fr;
+    }
+
+    .audio.green-audio-player {
+        background-color: #00000027;
+    }
+
+    .celda2 {
+        display: none;
+    }
+
+    .celdaAjuste {
+        display: block;
+    }
+
+    .musicaControl {
+        margin: 10% auto !important;
+        height: 4rem !important;
+    }
+
+    .nosCasamos,
+    #nosCasamosFecha {
+        font-size: 2.5rem;
+    }
+
+    .nombresDD {
+        padding: 0 5%;
+        line-height: 9rem;
+        font-size: 11rem;
+        height: 28rem;
+
+    }
+
+    .number {
+        font-size: 6rem;
+    }
+
+    .contadorDiasDiv {
+        padding: 0 5%;
+    }
+
+    .unit {
+        margin: 5px 1%;
+    }
+
+    .time {
+        gap: 1%;
+    }
+
+    .number {
+        font-size: 6rem;
+    }
+
+    .label {
+        font-size: 3rem;
+    }
+
+    #fechaYlugar div div div {
+        display: block;
+    }
+
+    .divImg {
+        width: 20VW;
+        height: 15vh;
+    }
+
+    .imagenCeremonia {
+        margin: 0 0 0 1vh !important;
+    }
+
+    .ceremoniaSubTitulo,
+    .pServices,
+    .ceremoniaP,
+    .regaloP {
+        font-size: 2.6rem !important;
+    }
+
+    .regaloP {
+        padding: 0 1vw;
+    }
+
+    .btnConfirmacion,
+    .btnMusica,
+    .btnRegalo,
+    .btnMapa,
+    .btnCalendario {
+        text-transform: uppercase;
+        font-size: 1.4rem !important;
+        display: block;
+        margin-top: 2vh !important;
+    }
+
+    .margin_top {
+        margin-top: 3vh;
+    }
+
+    .lugar {
+        margin-top: 0 !important;
+    }
+
+    .regaloIMG {
+        width: 20vw !important;
+    }
+
+    .losEsperamosBack {
+        padding-top: 0 !important;
+        height: 62vh !important;
+        background-image: url(../assets/img/backSec2222.jpg) !important;
+        background-size: contain !important;
+        background-repeat: no-repeat;
+        background-position: bottom !important;
+    }
+
+    .losEsperamosDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .losEsperamosDiv h2 {
+        font-size: 5rem !important;
+    }
+
+    .graciasP {
+        font-size: 4rem !important;
+    }
+
+    .anillosImg {
+        position: absolute;
+        bottom: 3vh;
+
+    }
+
+}
+
+/*-----------Tablet mas grande-------------------------------------*/
 
 @media screen and (min-width: 600px) and (max-width: 1024px) {
     #nosCasamos_id {
@@ -866,3 +1115,8 @@ footer {
 
 }
 
+
+/*---------modal----------------------------------*/
+.modal-content{
+    padding: 1rem 0 !important;
+}

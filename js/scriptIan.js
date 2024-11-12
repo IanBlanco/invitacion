@@ -1,3 +1,19 @@
+//------bienvenida----------------------
+function mostrarContenido() {
+  document.querySelector('.splash').style.opacity = '0';
+  setTimeout(() => {
+      document.querySelector('.splash').style.display = 'none';
+      document.getElementById('contenido').style.display = 'block';
+      
+      // Iniciar la música
+      const audio = document.querySelector('audio');
+      audio.volume = 0.2; // Ajusta el volumen si lo deseas
+      audio.play().catch(error => {
+          console.log('La reproducción automática fue bloqueada:', error);
+      });
+  }, 1000);
+}
+
 //---------------------CONTADOR DE TIEMPO-----------------------------------------------
 
 // Fecha objetivo (29 de diciembre del año actual)
@@ -32,27 +48,32 @@ const countdown = setInterval(() => {
 
 //---------------MUSICA---------------------------------------------------------
 
+// Seleccionar el audio y configurar su volumen
 const audio = document.querySelector('audio');
-
 audio.volume = 0.2;
+
 const playPauseButton = document.querySelector('.play-pause-btn');
 const currentTimeSpan = document.querySelector('.current-time');
 const totalTimeSpan = document.querySelector('.total-time');
 
-// Cargar el tiempo total al cargar el audio
+// Cargar el tiempo total al cargar el audio y reproducir automáticamente
 audio.addEventListener('loadedmetadata', () => {
   totalTimeSpan.textContent = formatTime(audio.duration);
   audio.currentTime = 6;
+  
+  // Intentar iniciar la reproducción
+  /*
+  audio.play().catch(error => {
+    console.log('La reproducción automática fue bloqueada por el navegador:', error);
+  });*/
 });
 
 // Reproducir o pausar el audio al hacer clic en el botón
 playPauseButton.addEventListener('click', () => {
   if (audio.paused) {
-    audio.volume = 0.2;
     audio.play();
     playPauseButton.querySelector('path').setAttribute('d', 'M6 4h2v16H6zm6 0h2v16h-2z'); // Cambiar a pausa
   } else {
-    audio.volume = 0.2;
     audio.pause();
     playPauseButton.querySelector('path').setAttribute('d', 'M18 12L0 24V0'); // Cambiar a play
   }
