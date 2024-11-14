@@ -70,11 +70,11 @@
 
 /*---------IMAGEN BIENVENIDA--------------------------------*/
 
- /* Imagen de bienvenida */
- .splash {
+/* Imagen de bienvenida */
+.splash {
     position: fixed;
     width: 100vw;
-    height: 100vh;
+    height: 85vh;
     background: url('../assets/img/envelopet.png') no-repeat center/cover;
     display: flex;
     align-items: center;
@@ -82,16 +82,18 @@
     transition: opacity 1s;
     z-index: 10;
 }
+
 .splash button {
     border: none;
     cursor: pointer;
     background-color: transparent;
 }
 
-.splash button img{
-    
+.splash button img {
+
     border-radius: 50%;
 }
+
 /* Ocultar contenido al inicio */
 #contenido {
     display: none;
@@ -141,8 +143,6 @@ body {
     font-style: normal;
 }
 
-
-
 .nosCasamos {
     font-size: 2rem;
 }
@@ -153,12 +153,10 @@ body {
 }
 
 .nombresDD {
-    
+
     font-size: 6rem;
     height: 8rem;
 }
-
-
 
 /*--------------musica----------------------------------------------*/
 
@@ -290,8 +288,6 @@ body {
     top: -8px;
 }
 
-
-
 /*---------------------------------------------contador dias---------------------------------------------------*/
 .contadorDias {
     font-weight: 200;
@@ -355,7 +351,6 @@ body {
 
 .imagenCeremonia {
     width: 90%;
-
 }
 
 #services {
@@ -391,7 +386,6 @@ body {
 #fechaYlugar {
     padding-top: 0;
     padding-bottom: 2vh;
-
 }
 
 .imagenFechaYhora {
@@ -410,7 +404,6 @@ body {
     text-transform: uppercase;
     color: #b5c7bb;
     cursor: pointer;
-
 }
 
 .ceremoniaP,
@@ -420,6 +413,10 @@ body {
 
 #asistencia {
     padding: 0 10%;
+}
+
+.pSolo {
+    padding: 1rem 0;
 }
 
 .close-form {
@@ -437,12 +434,8 @@ body {
 }
 
 .close-form:active {
-
     border: 1.5px solid rgba(0, 0, 0, 0.212);
 }
-
-
-
 
 .asisitireDiv {
     position: fixed;
@@ -469,8 +462,6 @@ body {
     overflow-y: auto;
     /* Permitir desplazamiento interno */
 }
-
-
 
 .asisitireDiv.active {
     opacity: 1;
@@ -509,6 +500,16 @@ body {
 .sectionNH {
     padding: 0 0 2rem 0;
     display: none;
+}
+
+/*---------------------dressCode-----------------------------------------*/
+#dressCode,
+#regalo {
+    padding-bottom: 0.5rem;
+}
+
+.dressCodeP {
+    margin-bottom: 0 !important;
 }
 
 /*--------------- regalo--------------------------------------------------*/
@@ -566,8 +567,6 @@ body {
     margin: 0 5vw;
 }
 
-
-
 .musicaForm {
     position: fixed;
     top: 50%;
@@ -577,12 +576,10 @@ body {
     max-width: 600px;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     z-index: 1000;
-
 }
 
 .musicaForm iframe {
@@ -596,7 +593,6 @@ body {
     visibility: visible;
     overflow: hidden;
     padding: 0;
-
 }
 
 .close-musica {
@@ -624,12 +620,8 @@ body {
     visibility: visible;
 }
 
-
-
-
 /*--------------- galeria gracias--------------------------------------------------*/
 #galeriaGracias {
-
     background-color: #b5c7bb81 !important;
     padding: 0 0 2rem 0;
 }
@@ -638,14 +630,10 @@ body {
     margin: 1.5vh 0;
 }
 
-
-
 /*--------------- te esperamos--------------------------------------------------*/
 .teEsperamos {
     padding: 5vh 0 2vh 0;
     background-color: #b5c7bb81 !important;
-
-
 }
 
 .teEsperamos div div div h2 {
@@ -655,16 +643,13 @@ body {
     font-weight: 600;
     font-style: italic;
     font-size: larger;
-
 }
 
 .losEsperamosDiv {
     padding-bottom: 1vh;
 }
 
-
 .losEsperamosBack {
-
     padding: 8vh 0 2vh 0;
     height: 70vh;
     background-image: url(../assets/img/backSec22.jpg);
@@ -673,9 +658,7 @@ body {
     background-color: rgba(255, 255, 255, 0.5);
     /* Color de la máscara */
     background-blend-mode: lighten;
-
     background-attachment: fixed;
-
 }
 
 .losEsperamosBack div div div h2 {
@@ -686,18 +669,12 @@ body {
     font-style: italic;
     font-size: 4rem !important;
     margin: 3vh 0 0 0 !important;
-
 }
-
-
 
 /*--------------- footer--------------------------------------------------*/
 footer {
     display: none;
 }
-
-
-
 
 /*---------------------media query-----------------------------------------*/
 
@@ -705,12 +682,11 @@ footer {
     display: none;
 }
 
-
 @media (max-width: 576px) {
-
     .splash {
         background: url('../assets/img/envelopetm.png') no-repeat center/cover;
     }
+
     #nosCasamos_id {
         grid-template-columns: 1fr 2fr 1fr;
         grid-template-rows: 1fr 6fr 1fr;
@@ -814,9 +790,10 @@ footer {
         padding: 0 1%;
     }
 
-    .graciasP{
+    .graciasP {
         font-size: 3rem !important;
     }
+
     .losEsperamosBack {
         padding-top: 0 !important;
         height: 64vh !important;
@@ -827,15 +804,14 @@ footer {
     }
 }
 
-
 /*-----------------------tablet------------------------*/
-
 
 @media screen and (min-width: 600px) and (max-width: 1024px) {
 
     .splash {
         background: url('../assets/img/envelopetm.png') no-repeat center/cover;
     }
+
     #nosCasamos_id {
         grid-template-columns: 1fr 2fr 1fr;
         grid-template-rows: 1fr 6fr 1fr;
@@ -868,7 +844,6 @@ footer {
         line-height: 9rem;
         font-size: 11rem;
         height: 28rem;
-
     }
 
     .number {
@@ -969,14 +944,13 @@ footer {
     .anillosImg {
         position: absolute;
         bottom: 3vh;
-
     }
 
 }
 
 /*-----------Tablet mas grande-------------------------------------*/
-
-@media screen and (min-width: 600px) and (max-width: 1024px) {
+/*
+@media screen and (min-width: 1024px) and (max-width: 1024px) {
     #nosCasamos_id {
         grid-template-columns: 1fr 2fr 1fr;
         grid-template-rows: 1fr 6fr 1fr;
@@ -1114,9 +1088,9 @@ footer {
     }
 
 }
-
+*/
 
 /*---------modal----------------------------------*/
-.modal-content{
+.modal-content {
     padding: 1rem 0 !important;
 }
